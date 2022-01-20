@@ -61,38 +61,52 @@ class Auth extends Component {
 
   render() {
     return (
-      <div className="auth">
-        <div className="auth-container">
-          <span className="material-icons" alt="logo">
-            language
-          </span>
-          <h1 className="auth-title">Helo</h1>
+      <div className="auth-parent">
+        <header className='auth-header'>
+          Poboca.app
+        </header>
+        <section className='section-parent'>
+          <h1> A web app for post-bootcamp students. </h1>
+        </section>
+        <div className='login-container'>
+          <div className='login-inputs-container'>
+            <input
+              value={this.state.username} placeholder="Username"
+              onChange={(e) => this.handleChange("username", e.target.value)}
+            />
+            <input
+              value={this.state.password}
+              type="password"
+              placeholder="Password"
+              onChange={(e) => this.handleChange("password", e.target.value)}
+            />
+
+          </div>
+            <button className="dark-button" onClick={this.login}>
+              {" "}
+              Login{" "}
+            </button>
+        </div>
+        <div className='register-container'>
           {this.state.errorMsg && (
             <h3 className="auth-error-msg">
               {this.state.errorMsg}{" "}
               <span onClick={this.closeErrorMessage}>X</span>
             </h3>
           )}
-          <div className="auth-input-box">
-            <p>Username:</p>
-            <input
-              value={this.state.username}
-              onChange={(e) => this.handleChange("username", e.target.value)}
-            />
-          </div>
-          <div className="auth-input-box">
-            <p>Password:</p>
-            <input
-              value={this.state.password}
-              type="password"
-              onChange={(e) => this.handleChange("password", e.target.value)}
-            />
-          </div>
+          <h3 className='auth-description'> Find others who want to continue to learn as we interview and find paying work.</h3>
+          <p> Want a free account? </p>
+          <input
+            value={this.state.username} placeholder="Username"
+            onChange={(e) => this.handleChange("username", e.target.value)}
+          />
+          <input
+            value={this.state.password}
+            type="password"
+            placeholder="Password"
+            onChange={(e) => this.handleChange("password", e.target.value)}
+          />
           <div className="auth-button-container">
-            <button className="dark-button" onClick={this.login}>
-              {" "}
-              Login{" "}
-            </button>
             <button className="dark-button" onClick={this.register}>
               {" "}
               Register{" "}
@@ -100,7 +114,7 @@ class Auth extends Component {
           </div>
         </div>
       </div>
-    );
+      )
   }
 }
 
