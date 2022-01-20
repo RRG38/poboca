@@ -75,7 +75,7 @@ class Auth extends Component {
               <span onClick={this.closeErrorMessage}>X</span>
             </h3>
           )}
-          <h3 className='auth-description'> Find others who want to continue to learn as we interview and find paying work.</h3>
+          <h3 className='auth-description'> Find others who want to continue to learn as we interview and find jobs.</h3>
           <p> Want a free account? </p>
           <input
             value={this.state.username} placeholder="Username"

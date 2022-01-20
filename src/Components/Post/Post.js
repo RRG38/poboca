@@ -9,7 +9,6 @@ class Post extends Component {
 
     this.state = {
       author: "",
-      author_pic: "",
       title: "",
       content: "",
       loading: true,
@@ -36,7 +35,6 @@ class Post extends Component {
               <h2 className="title">{this.state.title}</h2>
               <div className="author-box">
                 <p>by {this.state.author}</p>
-                <img src={this.state.author_pic} alt="author" />
               </div>
             </div>
             <div className="post-content-box">

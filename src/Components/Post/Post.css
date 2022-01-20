@@ -7,6 +7,10 @@
 .post-header {
   display: flex;
   justify-content: space-between;
+  background-color: #242424;
+  color: white;
+  margin: 2%;
+  padding: 1%;
 }
 
 .post-content-box {

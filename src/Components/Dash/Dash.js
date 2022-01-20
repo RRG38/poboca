@@ -70,7 +70,7 @@ class Dash extends Component {
       const intID = +id;
       return (
         <div className="content-box dash-post-box" key={post.post_id}>
-          <Link to={`post/${intID}`}>
+          <Link className='my-post-title' to={`post/${intID}`}>
             <h3>{post.title}</h3>
           </Link>
           {post.author_username === this.props.username ? (
@@ -79,8 +79,7 @@ class Dash extends Component {
             </button>
           ) : (
             <div className="author-box">
-              <p>by {post.author_username}</p>
-              <img src={post.profile_pic} alt="author" />
+              <p className='author-text'>by {post.author_username}</p>
             </div>
           )}
         </div>
@@ -89,6 +88,7 @@ class Dash extends Component {
 
     return (
       <div className="dash">
+        <div className='dash-title'> Click the New Post link above to put in a topic you want to learn or search for topics other people want to learn. </div>
         <div className="content-box dash-filter">
           <div className="dash-search-box">
             <input
@@ -104,6 +104,8 @@ class Dash extends Component {
               Reset
             </button>
           </div>
+
+
           <div className="dash-check-box">
             <p>Show My Posts</p>
             <input
