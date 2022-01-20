@@ -30,34 +30,23 @@ class Nav extends Component {
   render() {
     return (
       this.props.location.pathname !== "/" && (
-        <div className="nav">
-          <div className="nav-profile-container">
-            <div
-              className="nav-profile-pic"
-              style={{
-                backgroundImage: `url(${this.props.profilePic})`,
-              }}
-            ></div>
-            <p>{this.props.username}</p>
-          </div>
-          <div className="nav-links">
-            <Link to="/dash">
-              <span className="material-icons-outlined" alt="home">
-                menu
-              </span>
+        <div className="nav-parent">
+
+            <Link className="nav-links" to="/form">
+              <span alt="new post"> New Post </span>
             </Link>
-            <Link to="/form">
-              <span className="material-icons-outlined" alt="new post">
-                add
-              </span>
+
+            <Link className="nav-links" to="/dash">
+              <span  alt="home"> Home </span>
             </Link>
-          </div>
-          <Link to="/" onClick={this.logout}>
-            <span className="material-icons-outlined" alt="logout">
-              logout
-            </span>
+            <h1 className='title'> Poboca.app </h1>
+            <p className="username">{this.props.username}</p>
+          <Link className="nav-links" to="/" onClick={this.logout}>
+            <span alt="logout"> Logout </span>
           </Link>
-        </div>
+
+          </div>
+
       )
     );
   }
