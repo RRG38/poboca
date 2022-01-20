@@ -68,25 +68,6 @@ class Auth extends Component {
         <section className='section-parent'>
           <h1> A web app for post-bootcamp students. </h1>
         </section>
-        <div className='login-container'>
-          <div className='login-inputs-container'>
-            <input
-              value={this.state.username} placeholder="Username"
-              onChange={(e) => this.handleChange("username", e.target.value)}
-            />
-            <input
-              value={this.state.password}
-              type="password"
-              placeholder="Password"
-              onChange={(e) => this.handleChange("password", e.target.value)}
-            />
-
-          </div>
-            <button className="dark-button" onClick={this.login}>
-              {" "}
-              Login{" "}
-            </button>
-        </div>
         <div className='register-container'>
           {this.state.errorMsg && (
             <h3 className="auth-error-msg">
@@ -107,6 +88,10 @@ class Auth extends Component {
             onChange={(e) => this.handleChange("password", e.target.value)}
           />
           <div className="auth-button-container">
+            <button className="dark-button" onClick={this.login}>
+              {" "}
+              Login{" "}
+            </button>
             <button className="dark-button" onClick={this.register}>
               {" "}
               Register{" "}
