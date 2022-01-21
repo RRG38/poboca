@@ -90,7 +90,7 @@ class Dash extends Component {
       <div className='master-dash'>
         <div className='dash-new'> Add a topic you want to learn more about! </div>
       <div className="dash">
-        <div className="content-box dash-filter">
+        <div className="content-box-dash-filter">
           <div className="dash-search-box">
             <div className='dash-search'> Search for Topics </div>
             <input
@@ -99,15 +99,17 @@ class Dash extends Component {
               className="dash-search-bar"
               placeholder="example: React, React Hooks, ReactJS, CSS Mastery"
             />
+            <div className='dash-buttons-container'>
             <button onClick={this.grabPosts} className="dark-button">
               Search
             </button>
             <button onClick={this.reset} className="dark-button">
               Reset
             </button>
+            </div>
           </div>
 
-
+          <div className='dash-check-box-container'>
           <div className="dash-check-box">
             <p>Show My Posts</p>
             <input
@@ -127,6 +129,7 @@ class Dash extends Component {
               }
               type="checkbox"
             />
+          </div>
           </div>
         </div>
         <div className="content-box dash-posts-container">

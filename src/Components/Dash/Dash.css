@@ -8,9 +8,18 @@
   flex-direction: column;
   background-color: #242424;
   width: 95vw;
+  /* height: 75vh; */
   align-self: center;
-
+  align-content: space-around;
 }
+
+.content-box-dash-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-self: center;
+}
+
 .dash-new {
   display: flex;
   flex-direction: column;
@@ -23,54 +32,84 @@
 .dash-search {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   text-align: center;
   align-self: center;
+  color: white;
+  font-size: 7vw;
 }
 .dash-filter {
 display: flex;
-flex-direction: row;
+flex-direction: column;
 align-items: center;
-justify-content: space-around;
-margin: 10px 0;
+/* justify-content: space-around; */
 color: white
 }
 
 .dash-search-box {
 display: flex;
-flex-wrap: wrap;
+flex-direction: column;
 justify-content: space-around;
 align-items: center;
-width: 80%;
+width: 80vw;
+height: 20vh;
 }
 
 .dash-search-bar {
 height: 5vh;
-width: 40vw;
+width: 80vw;
+}
+
+.dash-check-box-container {
+  display: flex;
+  justify-content: space-around;
 }
 
 .dash-check-box {
 display: flex;
 justify-content: space-around;
 align-items: center;
+color: white;
 }
 
 .dash-post-box{
 display: flex;
 justify-content: space-between;
 align-items: center;
-margin: 10px 0;
+/* margin: 10px 0; */
 }
 
 .dash-post-box > h3 {
-font-size: 30px;
+font-size: 4vw;
 }
 
 .my-post-title {
-  font-size: large;
-  color: white;
+  font-size: 6vw;
+  color: black;
 }
 
 .author-text {
-  color: white;
+  color: black;
+}
+
+.dark-button {
+  font-size: 7vw;
+  width: 30vw;
+  justify-content: space-around;
+
+}
+
+.dash-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 70vw;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* height: 40vh; */
+  background-color: #eeeeee;
+  color: #000000;
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }
