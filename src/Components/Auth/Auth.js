@@ -82,6 +82,11 @@ class Auth extends Component {
           <div className='auth-description'> Continue to learn as we interview and find jobs.</div>
           <div className='auth-free'> Want a free account? </div>
 
+          <input className="auth-input"
+            value={this.state.school}
+            placeholder="Bootcamp (Only at Register)"
+            onChange={(e) => this.handleChange("school", e.target.value)}
+          />
             <input className="auth-input"
               value={this.state.username} placeholder="Username"
               onChange={(e) => this.handleChange("username", e.target.value)}
@@ -91,11 +96,6 @@ class Auth extends Component {
               type="password"
               placeholder="Password"
               onChange={(e) => this.handleChange("password", e.target.value)}
-            />
-            <input className="auth-input"
-              value={this.state.school}
-              placeholder="Bootcamp Attended"
-              onChange={(e) => this.handleChange("school", e.target.value)}
             />
 
           <div className="auth-button-container">
