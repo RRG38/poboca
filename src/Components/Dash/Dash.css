@@ -1,12 +1,12 @@
-.dash-title {
-  text-align: center;
-  color: white;
-  padding: 1%;
-}
 .dash {
   background-color: #242424;
-  margin: 2%;
+  margin: 1% 2% 3% 2%;
   padding: 1%;
+}
+.dash-title {
+  text-align: left;
+  color: white;
+  padding: 0% 1% 1% 1%;
 }
 
 .dash-filter {
@@ -21,7 +21,7 @@ color: white
 .dash-search-box {
 display: flex;
 flex-wrap: wrap;
-/* justify-content: space-between; */
+justify-content: space-around;
 align-items: center;
 width: 80%;
 }

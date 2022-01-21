@@ -88,14 +88,15 @@ class Dash extends Component {
 
     return (
       <div className="dash">
-        <div className='dash-title'> Click the New Post link above to put in a topic you want to learn or search for topics other people want to learn. </div>
+        <div className='dash-title'> Click the New Post to put in a topic you want to learn! </div>
         <div className="content-box dash-filter">
           <div className="dash-search-box">
+            <div className='dash-title'> Search for a topic you want to learn and connect. </div>
             <input
               value={search}
               onChange={(e) => this.setState({ search: e.target.value })}
               className="dash-search-bar"
-              placeholder="Search by Title"
+              placeholder="example: React, React Hooks, ReactJS, CSS Mastery"
             />
             <button onClick={this.grabPosts} className="dark-button">
               Search

@@ -6,6 +6,10 @@
   box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }
 
+.username-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
 
 .username {
   color: #dddddd;
@@ -13,8 +17,24 @@
 
 .title {
   color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {
   color: white;
 }
+
+.nav-links-left {
+  display: flex;
+  color: white;
+  flex-direction: column-reverse;
+  /* justify-content: space-around; */
+}
+
+.material-icons {
+  color: white;
+  font-size: 36px;
+}
+

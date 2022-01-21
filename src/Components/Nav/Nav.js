@@ -32,18 +32,24 @@ class Nav extends Component {
       this.props.location.pathname !== "/" && (
         <div className="nav-parent">
 
-            <Link className="nav-links" to="/form">
-              <span alt="new post"> New Post </span>
+            <Link style={{textDecoration: 'none'}} className="nav-links-left" to="/form">
+            <div className='material-icons' >add</div>
             </Link>
 
-            <Link className="nav-links" to="/dash">
-              <span  alt="home"> Home </span>
+            <Link style={{textDecoration: 'none'}} className="nav-links-left" to="/dash">
+            <div className='material-icons' >home</div>
             </Link>
             <h1 className='title'> Pobooca.app </h1>
-            <p className="username">{this.props.username}</p>
-          <Link className="nav-links" to="/" onClick={this.logout}>
-            <span alt="logout"> Logout </span>
+
+
+            <div className="username-container">
+              <p className="username">WR10 / WRPT3</p>
+              <p className="username">Devmountain</p>
+              <p className="username">: {this.props.username}</p>
+          <Link style={{textDecoration: 'none'}} className="nav-links" to="/" onClick={this.logout}>
+          <div className='material-icons' >logout</div>
           </Link>
+            </div>
 
           </div>
 
