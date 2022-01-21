@@ -1,4 +1,4 @@
-INSERT INTO helo_users
+INSERT INTO users
 (username, password)
 VALUES
 ($1, $2)

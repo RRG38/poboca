@@ -63,11 +63,11 @@ class Auth extends Component {
     return (
       <div className="auth-parent">
         <header className='auth-header'>
-          Poboca.app
+          Pobooca.app
         </header>
-        <section className='section-parent'>
-          <h1> A web app for post-bootcamp students. </h1>
-        </section>
+        <h1 className='section-parent'>
+          A web app for post-bootcamp students.
+        </h1>
         <div className='register-container'>
           {this.state.errorMsg && (
             <h3 className="auth-error-msg">

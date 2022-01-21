@@ -39,7 +39,7 @@ class Nav extends Component {
             <Link className="nav-links" to="/dash">
               <span  alt="home"> Home </span>
             </Link>
-            <h1 className='title'> Poboca.app </h1>
+            <h1 className='title'> Pobooca.app </h1>
             <p className="username">{this.props.username}</p>
           <Link className="nav-links" to="/" onClick={this.logout}>
             <span alt="logout"> Logout </span>
@@ -55,7 +55,6 @@ class Nav extends Component {
 const mapStateToProps = (state) => {
   return {
     username: state.username,
-    profilePic: state.profilePic,
   };
 };
 

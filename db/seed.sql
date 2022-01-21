@@ -1,13 +1,17 @@
-CREATE TABLE helo_users (
+DROP TABLE IF EXISTS posts;
+
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR NOT NULL,
     password VARCHAR NOT NULL
 );
 
-CREATE TABLE helo_posts (
+CREATE TABLE posts (
     id SERIAL PRIMARY KEY,
-    title VARCHAR(45) NOT NULL,
+    title VARCHAR NOT NULL,
     content TEXT,
-    author_id INT REFERENCES helo_users(id),
+    author_id INT REFERENCES users(id),
     date_created TIMESTAMP
 );
