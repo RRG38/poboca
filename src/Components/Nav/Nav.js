@@ -52,7 +52,7 @@ class Nav extends Component {
             <div className='title'> Pobooca.app </div>
             <div className="username-container">
               <div className="username">: {this.props.username}</div>
-              <div className='nav-school'>: {this.props.school} </div>
+              <div className='nav-school'> {this.props.school} </div>
               </div>
 
 

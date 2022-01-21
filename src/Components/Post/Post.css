@@ -5,6 +5,8 @@
   align-content: center;
 }
 .post-title {
+  width: 100vw;
+  font-size: 10vw;
   color: black;
 }
 .post-header {

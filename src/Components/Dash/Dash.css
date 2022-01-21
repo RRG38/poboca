@@ -1,13 +1,15 @@
 .master-dash {
   display: flex;
   flex-direction: column;
+  width: 95vw;
+  align-self: center;
 }
 
 .dash {
   display: flex;
   flex-direction: column;
   background-color: #242424;
-  width: 95vw;
+  width: 90vw;
   /* height: 75vh; */
   align-self: center;
   align-content: space-around;
@@ -89,6 +91,7 @@ font-size: 4vw;
 
 .author-text {
   color: black;
+  font-size: 5vw;
 }
 
 .dark-button {
@@ -104,12 +107,18 @@ font-size: 4vw;
   width: 70vw;
 }
 
-.content-box {
+.content-box-dash-post-box {
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* height: 40vh; */
+  align-content: center;
+  justify-content: center;
+  height: 15vh;
   background-color: #eeeeee;
   color: #000000;
   box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+}
+
+.dash-delete-button {
+
 }
