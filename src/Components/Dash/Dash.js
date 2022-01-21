@@ -87,11 +87,12 @@ class Dash extends Component {
     });
 
     return (
+      <div className='master-dash'>
+        <div className='dash-new'> Add a topic you want to learn more about! </div>
       <div className="dash">
-        <div className='dash-title'> Click the New Post to put in a topic you want to learn! </div>
         <div className="content-box dash-filter">
           <div className="dash-search-box">
-            <div className='dash-title'> Search for a topic you want to learn and connect. </div>
+            <div className='dash-search'> Search for Topics </div>
             <input
               value={search}
               onChange={(e) => this.setState({ search: e.target.value })}
@@ -138,6 +139,7 @@ class Dash extends Component {
             </div>
           )}
         </div>
+      </div>
       </div>
     );
   }

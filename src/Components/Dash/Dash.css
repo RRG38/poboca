@@ -1,14 +1,32 @@
-.dash {
-  background-color: #242424;
-  margin: 1% 2% 3% 2%;
-  padding: 1%;
-}
-.dash-title {
-  text-align: left;
-  color: white;
-  padding: 0% 1% 1% 1%;
+.master-dash {
+  display: flex;
+  flex-direction: column;
 }
 
+.dash {
+  display: flex;
+  flex-direction: column;
+  background-color: #242424;
+  width: 95vw;
+  align-self: center;
+
+}
+.dash-new {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  height: 5vh;
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+}
+.dash-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-self: center;
+}
 .dash-filter {
 display: flex;
 flex-direction: row;
@@ -27,8 +45,8 @@ width: 80%;
 }
 
 .dash-search-bar {
-height: 25px;
-width: 30%;
+height: 5vh;
+width: 40vw;
 }
 
 .dash-check-box {

@@ -39,13 +39,11 @@ class Nav extends Component {
             <Link style={{textDecoration: 'none'}} className="nav-links-left" to="/dash">
             <div className='material-icons' >home</div>
             </Link>
-            <h1 className='title'> Pobooca.app </h1>
+            <div className='title'> Pobooca.app </div>
 
 
             <div className="username-container">
-              <p className="username">WR10 / WRPT3</p>
-              <p className="username">Devmountain</p>
-              <p className="username">: {this.props.username}</p>
+              <div className="username">: {this.props.username}</div>
           <Link style={{textDecoration: 'none'}} className="nav-links" to="/" onClick={this.logout}>
           <div className='material-icons' >logout</div>
           </Link>

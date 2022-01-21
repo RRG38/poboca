@@ -62,12 +62,14 @@ class Auth extends Component {
   render() {
     return (
       <div className="auth-parent">
-        <header className='auth-header'>
+        <div className='auth-header'>
           Pobooca.app
-        </header>
-        <h1 className='section-parent'>
+        </div>
+        <div className='section-parent'>
+          <div>
           A web app for post-bootcamp students.
-        </h1>
+        </div>
+        </div>
         <div className='register-container'>
           {this.state.errorMsg && (
             <h3 className="auth-error-msg">
@@ -75,18 +77,20 @@ class Auth extends Component {
               <span onClick={this.closeErrorMessage}>X</span>
             </h3>
           )}
-          <h3 className='auth-description'> Find others who want to continue to learn as we interview and find jobs.</h3>
-          <p> Want a free account? </p>
-          <input
-            value={this.state.username} placeholder="Username"
-            onChange={(e) => this.handleChange("username", e.target.value)}
-          />
-          <input
-            value={this.state.password}
-            type="password"
-            placeholder="Password"
-            onChange={(e) => this.handleChange("password", e.target.value)}
-          />
+          <div className='auth-description'> Continue to learn as we interview and find jobs.</div>
+          <div className='auth-free'> Want a free account? </div>
+
+            <input className="auth-input"
+              value={this.state.username} placeholder="Username"
+              onChange={(e) => this.handleChange("username", e.target.value)}
+            />
+            <input className="auth-input"
+              value={this.state.password}
+              type="password"
+              placeholder="Password"
+              onChange={(e) => this.handleChange("password", e.target.value)}
+            />
+
           <div className="auth-button-container">
             <button className="dark-button" onClick={this.login}>
               {" "}
