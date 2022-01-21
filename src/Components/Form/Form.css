@@ -1,45 +1,69 @@
-.form {
-  width: 70%;
-  margin: 0 auto;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.form-main {
+.form-master {
   display: flex;
   flex-direction: column;
+}
+
+.form-title {
+  display: flex;
+  justify-content: center;
+  font-size: 7vw;
+  height: 7vh;
+  font-weight: bold;
   align-items: center;
 }
 
-.form-img-prev {
-  max-width: 95%;
-  height: 300px;
-  border: 1px solid lightgray;
-  margin-top: 20px;
+.form-content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #eeeeee;
+  width: 95vw;
+  align-self: center;
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+}
+.form-main {
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .form-input-box {
-  width: 90%;
-  height: 50px;
+  width: 90vw;
+  height: 8vh;
+  font-size: 5vw;
+  padding: 2%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  margin: 20px auto;
+  align-self: center;
 }
+
 
 .form-text-box {
-  width: 90%;
-  margin: 3px auto 10px;
+  font-size: 6vw;
+  text-align: left;
+  padding: 2%;
 }
 
-.form-text-box > p {
-  margin: 0 0 7px;
+.learn-about {
+  display: flex;
+  justify-content: center;
 }
 
-textarea {
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 100px;
-  font-family: "Open Sans", "Courier New", Courier, monospace;
-  font-size: 12px;
+.form-dark-button {
+  font-size: 6vw;
+  background-color: #242424;
+  color: white;
+  height: 15vw;
+  width: 25vw;
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }
+
+
+
+
+
+
+

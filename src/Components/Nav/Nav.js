@@ -31,7 +31,7 @@ class Nav extends Component {
     return (
       this.props.location.pathname !== "/" && (
         <div className="nav-parent">
-
+<div className='nav-icons-container'>
             <Link style={{textDecoration: 'none'}} className="nav-links-left" to="/form">
             <div className='material-icons' >add</div>
             </Link>
@@ -39,17 +39,24 @@ class Nav extends Component {
             <Link style={{textDecoration: 'none'}} className="nav-links-left" to="/dash">
             <div className='material-icons' >home</div>
             </Link>
-            <div className='title'> Pobooca.app </div>
 
 
-            <div className="username-container">
-              <div className="username">: {this.props.username}</div>
-              <div className='nav-school'> {this.props.school} </div>
+              <div>
+
           <Link style={{textDecoration: 'none'}} className="nav-links" to="/" onClick={this.logout}>
           <div className='material-icons' >logout</div>
           </Link>
             </div>
+            </div>
+            <div className='bottom-nav'>
+            <div className='title'> Pobooca.app </div>
+            <div className="username-container">
+              <div className="username">: {this.props.username}</div>
+              <div className='nav-school'>: {this.props.school} </div>
+              </div>
 
+
+            </div>
           </div>
 
       )

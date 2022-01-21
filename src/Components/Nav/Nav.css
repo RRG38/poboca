@@ -1,28 +1,44 @@
 .nav-parent {
-  box-sizing: border-box;
   width: 100vw;
+  height: 20vh;
   background-color: #242424;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }
 
 .username-container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+}
+.bottom-nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-icons-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.username {
+  color: #eeeeee;
+  font-size: 5vw;
 }
 
-.username {
-  color: #dddddd;
+.nav-school {
+  color: #eeeeee
+  ;
+  font-size: 4vw;
 }
+
+
 
 .title {
   color: white;
   text-align: center;
   display: flex;
   align-items: center;
-  font-size: 5vw;
+  font-size: 7vw;
 }
 
 .nav-links {
