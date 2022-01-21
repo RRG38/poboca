@@ -28,23 +28,23 @@ class Post extends Component {
 
   render() {
     return (
-      <div className="post content-box">
+      <div className="post-container">
         {!this.state.loading && this.state.title ? (
           <div>
             <div className="post-header">
-              <h2 className="title">{this.state.title}</h2>
+              <div className="post-title">{this.state.title}</div>
               <div className="author-box">
                 <p>by {this.state.author}</p>
               </div>
             </div>
             <div className="post-content-box">
-              <p>{this.state.content}</p>
+              <div>{this.state.content}</div>
             </div>
           </div>
         ) : !this.state.loading ? (
           <div className="oops-box">
-            <h2 className="title">Oops!</h2>
-            <p>Looks like this post doesn't exist anymore</p>
+            <div className="title">Oops!</div>
+            <div>Looks like this post doesn't exist anymore</div>
           </div>
         ) : (
           <div className="load-box">
