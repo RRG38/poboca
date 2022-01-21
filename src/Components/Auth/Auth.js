@@ -11,6 +11,7 @@ class Auth extends Component {
     this.state = {
       username: "",
       password: "",
+      school: '',
       errorMsg: "",
     };
     this.login = this.login.bind(this);
@@ -24,11 +25,11 @@ class Auth extends Component {
   }
 
   login() {
-    const { username, password } = this.state;
+    const { username, password, school } = this.state;
     axios
       .post("/api/auth/login", this.state)
       .then((res) => {
-        this.props.updateUser({ username, password });
+        this.props.updateUser({ username, password, school });
         this.props.history.push("/dash");
       })
       .catch((err) => {
@@ -38,11 +39,11 @@ class Auth extends Component {
   }
 
   register() {
-    const { username, password } = this.state;
+    const { username, password, school } = this.state;
     axios
       .post("/api/auth/register", this.state)
       .then((res) => {
-        this.props.updateUser({ username, password });
+        this.props.updateUser({ username, password, school });
         this.props.history.push("/dash");
       })
       .catch((err) => {
@@ -56,6 +57,7 @@ class Auth extends Component {
       errorMsg: false,
       username: "",
       password: "",
+      school: ''
     });
   };
 
@@ -89,6 +91,11 @@ class Auth extends Component {
               type="password"
               placeholder="Password"
               onChange={(e) => this.handleChange("password", e.target.value)}
+            />
+            <input className="auth-input"
+              value={this.state.school}
+              placeholder="Bootcamp Attended"
+              onChange={(e) => this.handleChange("school", e.target.value)}
             />
 
           <div className="auth-button-container">

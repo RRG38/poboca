@@ -79,7 +79,8 @@ class Dash extends Component {
             </button>
           ) : (
             <div className="author-box">
-              <p className='author-text'>by {post.author_username}</p>
+              <div className='author-text'>by {post.author_username}</div>
+              <div className='dash-school-text'> {post.school} </div>
             </div>
           )}
         </div>

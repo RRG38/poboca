@@ -44,6 +44,7 @@ class Nav extends Component {
 
             <div className="username-container">
               <div className="username">: {this.props.username}</div>
+              <div className='nav-school'> {this.props.school} </div>
           <Link style={{textDecoration: 'none'}} className="nav-links" to="/" onClick={this.logout}>
           <div className='material-icons' >logout</div>
           </Link>
@@ -59,6 +60,7 @@ class Nav extends Component {
 const mapStateToProps = (state) => {
   return {
     username: state.username,
+    school: state.school
   };
 };
 

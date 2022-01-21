@@ -2,7 +2,7 @@ const bcrypt = require("bcryptjs");
 const db = (req) => req.app.get("db");
 
 const register = async (req, res) => {
-  const { username, password } = req.body;
+  const { username, password, school } = req.body;
   try {
     const foundUser = await db(req).user.find_user_by_username([username]);
     const existingUser = foundUser[0];
@@ -10,11 +10,12 @@ const register = async (req, res) => {
       return res.status(409).send("Username taken.");
     } else {
       const hash = bcrypt.hashSync(password); // default 10 salt
-      const registeredUser = await db(req).user.create_user([username, hash]);
+      const registeredUser = await db(req).user.create_user([username, hash, school]);
       const user = registeredUser[0];
       req.session.user = {
         id: user.id,
         username: user.username,
+        school: user.school
       };
       return res.status(201).send(req.session.user);
     }
@@ -44,6 +45,7 @@ const login = async (req, res) => {
         req.session.user = {
           id: existingUser.id,
           username: existingUser.username,
+          school: existingUser.school
         };
         console.log(req.session.user);
         return res.status(200).send(req.session.user);

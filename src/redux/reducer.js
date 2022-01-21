@@ -1,5 +1,6 @@
 const initialState = {
   username: "",
+  school: ''
 };
 
 const UPDATE_USER = "UPDATE_USER";
@@ -28,11 +29,13 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         username: action.payload.username,
+        school: action.payload.school
       };
     }
     case LOGOUT: {
       return {
         username: "",
+        school: ''
       };
     }
     default: {
