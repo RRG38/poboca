@@ -34,7 +34,7 @@ class Post extends Component {
             <div className="post-header">
               <div className="post-title">{this.state.title}</div>
               <div className="author-box">
-                <div>: {this.state.author}</div>
+                - {this.state.author}
               </div>
             </div>
             <div className="post-content-box">

@@ -75,12 +75,12 @@ class Dash extends Component {
           </Link>
           {post.author_username === this.props.username ? (
             <button className='dash-delete-button' onClick={(_) => this.deletePost(post.post_id)}>
-              delete your post
+              Delete your Post
             </button>
           ) : (
             <div className="author-box">
               <div className='author-text'>- {post.author_username}</div>
-              <div className='dash-school-text'>- {this.props.school}</div>
+              <div className='dash-school-text'> {this.props.school}</div>
             </div>
           )}
         </div>
@@ -101,10 +101,10 @@ class Dash extends Component {
               placeholder="example: React, React Hooks, ReactJS, CSS Mastery"
             />
             <div className='dash-buttons-container'>
-            <button onClick={this.grabPosts} className="dark-button">
+            <button onClick={this.grabPosts} className="dash-dark-button">
               Search
             </button>
-            <button onClick={this.reset} className="dark-button">
+            <button onClick={this.reset} className="dash-dark-button">
               Reset
             </button>
             </div>

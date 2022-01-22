@@ -94,10 +94,10 @@ font-size: 4vw;
   font-size: 5vw;
 }
 
-.dark-button {
+.dash-dark-button {
   font-size: 7vw;
   width: 30vw;
-  justify-content: space-around;
+  /* justify-content: space-evenly; */
 
 }
 
@@ -110,15 +110,22 @@ font-size: 4vw;
 .content-box-dash-post-box {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  align-content: center;
+  box-sizing: border-box;
+  padding: 2%;
+  /* text-align: center; */
   justify-content: center;
-  height: 15vh;
+  /* height: 15vh; */
   background-color: #eeeeee;
   color: #000000;
   box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }
 
 .dash-delete-button {
-
+  font-size: 3vw;
+  width: 30vw;
+  height: 4vh;
+  align-self: center;
+  /* justify-content: center; */
+  background-color: #242424;
+  color: white;
 }
