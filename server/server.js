@@ -8,6 +8,7 @@ postCtrl = require("./controllers/posts");
 const app = express();
 
 const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET } = process.env;
+const { login, register, logout } = require('./controllers/user');
 
 app.use(express.json());
 
@@ -33,10 +34,9 @@ massive({
   });
 
 // Auth Endpoints
-app.post("/api/auth/register", userCtrl.register);
-app.post("/api/auth/login", userCtrl.login);
-app.get("/api/auth/me", userCtrl.getUser);
-app.post("/api/auth/logout", userCtrl.logout);
+app.post('/auth/login', login);
+app.post('/auth/register', register);
+app.get('/auth/logout', logout);
 
 //Post Endpoints
 app.get("/api/posts", postCtrl.readPosts);

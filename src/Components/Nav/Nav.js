@@ -1,35 +1,20 @@
 import "./Nav.css";
 
-import React, { Component } from "react";
-import axios from "axios";
+import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
-import { updateUser, logout } from "../../redux/reducer";
+import { logoutUser } from "../../redux/reducer";
 
-class Nav extends Component {
-  constructor(props) {
-    super(props);
+const Nav = (props) => {
+  console.log(props);
 
-    this.logout = this.logout.bind(this);
-    this.getUser = this.getUser.bind(this);
+  const logout = () => {
+      props.logoutUser();
   }
 
-  componentDidMount() {
-    this.getUser();
-  }
-
-  getUser() {
-    axios.get("/api/auth/me").then((res) => this.props.updateUser(res.data));
-  }
-
-  logout() {
-    axios.post("/api/auth/logout").then((_) => this.props.logout());
-  }
-
-  render() {
-    return (
-      this.props.location.pathname !== "/" && (
+  return (
+      props.location.pathname !== "/" && (
         <div className="nav-parent">
 <div className='nav-icons-container'>
             <Link style={{textDecoration: 'none'}} className="nav-links-left" to="/form">
@@ -43,7 +28,7 @@ class Nav extends Component {
 
               <div>
 
-          <Link style={{textDecoration: 'none'}} className="nav-links" to="/" onClick={this.logout}>
+          <Link style={{textDecoration: 'none'}} className="nav-links" to="/" onClick={logout}>
           <div className='material-icons' >logout</div>
           </Link>
             </div>
@@ -51,8 +36,8 @@ class Nav extends Component {
             <div className='bottom-nav'>
             <div className='title'> Pobooca.app </div>
             <div className="username-container">
-              <div className="username">: {this.props.username}</div>
-              <div className='nav-school'> {this.props.school} </div>
+              <div className="username">: {props.username}</div>
+              <div className='nav-school'> {props.school} </div>
               </div>
 
 
@@ -62,15 +47,14 @@ class Nav extends Component {
       )
     );
   }
-}
 
-const mapStateToProps = (state) => {
+
+const mapDispatchToProps = (reduxState) => {
   return {
-    username: state.username,
-    school: state.school
+    state: reduxState
   };
 };
 
 export default withRouter(
-  connect(mapStateToProps, { updateUser, logout })(Nav)
+  connect(mapDispatchToProps, { logoutUser })(Nav)
 );
