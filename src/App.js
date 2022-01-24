@@ -1,5 +1,6 @@
-import React from "react";
 import "./App.css";
+
+import React from "react";
 
 import routes from "./routes";
 import Nav from "./Components/Nav/Nav";
