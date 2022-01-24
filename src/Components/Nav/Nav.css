@@ -1,11 +1,23 @@
 .nav-parent {
-  width: 100vw;
+  /* width: 100vw; */
   /* height: 20vh; */
   background-color: #242424;
   display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+}
+
+.nav-links-container {
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
-  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+}
+
+.nav-title-user-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .username-container {

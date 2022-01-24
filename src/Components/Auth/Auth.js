@@ -1,8 +1,11 @@
 import "./Auth.css";
+
 import React, { Component } from "react";
 import axios from "axios";
 import { connect } from "react-redux";
+
 import { updateUser } from "../../redux/reducer";
+
 class Auth extends Component {
   constructor(props) {
     super(props);
