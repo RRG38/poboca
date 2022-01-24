@@ -1,52 +1,61 @@
 import "./Auth.css";
-
-import React, { useState } from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import { connect } from "react-redux";
-import { loginUser } from "../../redux/reducer";
-
-const Auth = (props) => {
-
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [school, setSchool] = useState('')
-  const [errorMsg, setErrorMsg] = useState('')
-
-
-  const login = () => {
-      const loginInfo = { username, password }
-      props.loginUser(loginInfo);
-      props.history.push('/dash')
+import { updateUser } from "../../redux/reducer";
+class Auth extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      password: "",
+      school: '',
+      errorMsg: "",
+    };
+    this.login = this.login.bind(this);
+    this.register = this.register.bind(this);
   }
-
-  const register = () => {
-
-    const userInfo = {
-        username, password, school
-    }
-
-    axios.post('/auth/register', userInfo )
-        .then(res => {
-            console.log(res.data);
-            props.history.push('/dash')
-            // const newUsername = res.data.username;
-            // const loginInfo = { newUsername, password };
-            // props.loginUser(loginInfo);
-            // setShowConfirmationScreen(true);
-        })
-        .catch(err => console.log(err))
-}
-
-const closeErrorMessage = () => {
-  setErrorMsg({
-    errorMsg: false,
-    username: "",
-    password: "",
-    school: ''
-  });
-
-};
-  return (
+  handleChange(prop, val) {
+    this.setState({
+      [prop]: val,
+    });
+  }
+  login() {
+    const { username, password, school } = this.state;
+    axios
+      .post("/api/auth/login", this.state)
+      .then((res) => {
+        this.props.updateUser({ username, password, school });
+        this.props.history.push("/dash");
+      })
+      .catch((err) => {
+        console.log(err);
+        this.setState({ errorMsg: "Incorrect username or password!" });
+      });
+  }
+  register() {
+    const { username, password, school } = this.state;
+    axios
+      .post("/api/auth/register", this.state)
+      .then((res) => {
+        this.props.updateUser({ username, password, school });
+        this.props.history.push("/dash");
+      })
+      .catch((err) => {
+        console.log(err);
+        this.setState({ errorMsg: "Username taken!" });
+      });
+  }
+  closeErrorMessage = () => {
+    this.setState({
+      errorMsg: false,
+      username: "",
+      password: "",
+      school: ''
+    });
+  };
+  render() {
+    return (
       <div className="auth-parent">
         <div className='auth-header'>
           Pobooca.app
@@ -57,37 +66,37 @@ const closeErrorMessage = () => {
         </div>
         </div>
         <div className='register-container'>
-          {errorMsg && (
+          {this.state.errorMsg && (
             <h3 className="auth-error-msg">
-              {errorMsg}{" "}
-              <span onClick={closeErrorMessage}>X</span>
+              {this.state.errorMsg}{" "}
+              <span onClick={this.closeErrorMessage}>X</span>
             </h3>
           )}
           <div className='auth-description'> Continue to learn as we interview and find jobs.</div>
           <div className='auth-free'> Want a free account? </div>
 
           <input className="auth-input"
-            value={school}
+            value={this.state.school}
+            placeholder="Bootcamp (Only at Register)"
           placeholder="Bootcamp Attended"
-            onChange={(e) => setSchool(e.target.value)}
+            onChange={(e) => this.handleChange("school", e.target.value)}
           />
             <input className="auth-input"
-              value={username} placeholder="Username"
-              onChange={(e) => setUsername(e.target.value)}
+              value={this.state.username} placeholder="Username"
+              onChange={(e) => this.handleChange("username", e.target.value)}
             />
             <input className="auth-input"
-              value={password}
+              value={this.state.password}
               type="password"
               placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => this.handleChange("password", e.target.value)}
             />
-
           <div className="auth-button-container">
-            <button className="dark-button" onClick={login}>
+            <button className="dark-button" onClick={this.login}>
               {" "}
               Login{" "}
             </button>
-            <button className="dark-button" onClick={register}>
+            <button className="dark-button" onClick={this.register}>
               {" "}
               Register{" "}
             </button>
@@ -96,14 +105,5 @@ const closeErrorMessage = () => {
       </div>
       )
   }
-
-
-const mapStateToProps = (reduxState) => {
-  return {
-    state: reduxState.state
-  }
 }
-
-const mapDispatchToProps = { loginUser }
-
-export default connect(mapStateToProps, mapDispatchToProps)(Auth);
+export default connect(null, { updateUser })(Auth);
