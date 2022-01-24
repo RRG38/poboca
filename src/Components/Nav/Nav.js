@@ -1,60 +1,55 @@
 import "./Nav.css";
-
-import React from "react";
+import React, { Component } from "react";
+import axios from "axios";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-
-import { logoutUser } from "../../redux/reducer";
-
-const Nav = (props) => {
-  console.log(props);
-
-  const logout = () => {
-      props.logoutUser();
+import { updateUser, logout } from "../../redux/reducer";
+class Nav extends Component {
+  constructor(props) {
+    super(props);
+    this.logout = this.logout.bind(this);
+    this.getUser = this.getUser.bind(this);
   }
-
-  return (
-      props.location.pathname !== "/" && (
+  componentDidMount() {
+    this.getUser();
+  }
+  getUser() {
+    axios.get("/api/auth/me").then((res) => this.props.updateUser(res.data));
+  }
+  logout() {
+    axios.post("/api/auth/logout").then((_) => this.props.logout());
+  }
+  render() {
+    return (
+      this.props.location.pathname !== "/" && (
         <div className="nav-parent">
-<div className='nav-icons-container'>
             <Link style={{textDecoration: 'none'}} className="nav-links-left" to="/form">
             <div className='material-icons' >add</div>
             </Link>
-
             <Link style={{textDecoration: 'none'}} className="nav-links-left" to="/dash">
             <div className='material-icons' >home</div>
             </Link>
+            <div className='title'> Pobooca.app </div>
 
-
-              <div>
-
-          <Link style={{textDecoration: 'none'}} className="nav-links" to="/" onClick={logout}>
+            <div className="username-container">
+              <div className="username">: {this.props.username}</div>
+              <div className='nav-school'> {this.props.school} </div>
+          <Link style={{textDecoration: 'none'}} className="nav-links" to="/" onClick={this.logout}>
           <div className='material-icons' >logout</div>
           </Link>
             </div>
-            </div>
-            <div className='bottom-nav'>
-            <div className='title'> Pobooca.app </div>
-            <div className="username-container">
-              <div className="username">: {props.username}</div>
-              <div className='nav-school'> {props.school} </div>
-              </div>
-
-
-            </div>
           </div>
-
       )
     );
   }
-
-
-const mapDispatchToProps = (reduxState) => {
+}
+const mapStateToProps = (state) => {
   return {
-    state: reduxState
+    username: state.username,
+    school: state.school
   };
 };
 
 export default withRouter(
-  connect(mapDispatchToProps, { logoutUser })(Nav)
+  connect(mapStateToProps, { updateUser, logout })(Nav)
 );
