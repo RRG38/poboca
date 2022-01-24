@@ -4,52 +4,118 @@
 }
 
 .auth-header {
-  width: 100vw;
   font-size: 15vw;
 
-  /* align-items: center; */
   display: flex;
+  justify-content: center;
+
   background-color: #242424;
   color: white;
-  justify-content: center;
-  /* padding: 5% 5% 5% 5%; */
   box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }
 
-/* .auth-title {
-  font-size: 8vw;
-} */
 .section-parent {
-  width: 100vw;
-  /* height: 15vh; */
   font-size: 8vw;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-content: center;
+
   text-align: center;
-  vertical-align: center;
 }
 
 .register-container {
-  display: flex;
-  height: 60vh;
+  height: 75vh;
   width: 85vw;
-  font-size: 4vw;
-  /* box-sizing: border-box; */
+
+  display: flex;
   flex-direction: column;
-  background-color: #242424;
-
-  /* border-style: thin; */
-  /* border-width: 2vw; */
-  /* padding: 1% 2% 1% 2%; */
-
-  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
-  color: white;
-  /* align-items: space-around; */
   justify-content: space-evenly;
   text-align: center;
   align-self: center;
+
+  color: white;
+  background-color: #242424;
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+}
+.auth-free {
+  color: white;
+  font-size: 5vw;
+}
+
+.dark-button {
+  justify-content: center;
+  font-size: 5vw;
+}
+
+.auth-input {
+  font-size: 5vw;
+  align-self: center;
+}
+.auth-description {
+  display: flex;
+  color: white;
+  align-self: center;
+  font-size: 6vw;
+  width: 80vw;
+  border: solid #242424;
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+
+}
+@media (min-width: 400px) {
+  .auth-description {
+    font-size: 3vw;
+
+    display: flex;
+    justify-content: center;
+
+    color: white;
+    border: solid #242424;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+
+  }
+
+  .register-container {
+    height: 85vh;
+    width: 90vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    align-self: center;
+
+    color: white;
+    background-color: #242424;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+  }
+  .auth-free {
+    color: white;
+    font-size: 3vw;
+  }
+
+  .dark-button {
+    justify-content: center;
+    font-size: 3vw;
+  }
+
+  .auth-input {
+    width: 65vw;
+    font-size: 3vw;
+    align-self: center;
+  }
+  .section-parent {
+    font-size: 3vw;
+
+    text-align: center;
+  }
+  .auth-header {
+    font-size: 4vw;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #242424;
+    color: white;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+  }
+
 }
 
 .auth-error-msg {
@@ -73,82 +139,7 @@
 .auth-button-container {
   display: flex;
   justify-content: space-around;
-  /* padding: 2%; */
-}
-
-.auth-description {
-  display: flex;
-  color: white;
-  align-self: center;
-  font-size: 6vw;
-  width: 80vw;
-  border: solid #242424;
-  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
-
-}
-
-.auth-free {
-  color: white;
-  font-size: 5vw;
-}
-
-.dark-button {
-  /* width: 40vw; */
-  /* height: 5vh; */
-  justify-content: center;
-  font-size: 5vw;
-}
-
-.auth-input {
-  font-size: 5vw;
-  /* width: 60vw; */
-  /* height: 5vh; */
-  align-self: center;
-}
-
-
-/* @media (min-width: 600px) {
-
-  .auth-button-container {
-    display: flex;
-    justify-content: center;
 }
 
 
 
-.dark-button {
-  justify-content: center;
-  font-size: 1rem;
-
-} */
-/* .section-parent {
-  display: flex;
-  justify-content: center;
-  font-size: 2em;
-  text-align: center;
-  margin: 2%;
-  border: solid #eeeeee;
-  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
-} */
-
-@media (min-width: 400px) {
-  .register-container {
-    display: flex;
-    height: 100vh;
-    width: 85vw;
-    /* box-sizing: border-box; */
-    /* flex-direction: column; */
-    background-color: #242424;
-
-    /* border-style: thin; */
-    /* border-width: 2vw; */
-    /* padding: 1% 2% 1% 2%; */
-
-    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
-    color: white;
-    /* align-items: space-around; */
-    justify-content: space-evenly;
-    text-align: center;
-    align-self: center;
-  }
-}
