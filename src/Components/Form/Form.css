@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   font-size: 7vw;
-  height: 7vh;
+  /* height: 7vh; */
   font-weight: bold;
   align-items: center;
 }
@@ -17,7 +17,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #eeeeee;
+  background-color: #242424;
+  color: white;
   width: 95vw;
   align-self: center;
   box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
@@ -32,7 +33,7 @@
 
 .form-input-box {
   width: 90vw;
-  height: 8vh;
+  /* height: 8vh; */
   font-size: 5vw;
   padding: 2%;
   display: flex;
@@ -54,12 +55,27 @@
 
 .form-dark-button {
   font-size: 6vw;
-  background-color: #242424;
-  color: white;
+  background-color: #dddddd;
+  /* color: white; */
   /* height: 15vw; */
   width: 25vw;
   margin: 2%;
   box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+}
+
+@media (min-width: 400px) {
+  .form-title {
+    font-size: 5vw;
+  }
+
+  .form-text-box {
+    font-size: 4vw;
+  }
+
+  .form-main {
+    background-color: #242424;
+    color: white;
+  }
 }
 
 
