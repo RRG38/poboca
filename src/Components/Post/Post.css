@@ -1,16 +1,18 @@
 .post-container {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+  margin: 2%;
   /* justify-content: center;
   align-self: center; */
   align-items: center;
   /* height: 70vh; */
+  box-shadow: none;
 }
 .post-header {
   display: flex;
   flex-direction: column;
-  height: 10vh;
+  /* height: 10vh; */
   justify-content: center;
   align-self: center;
   width: 85vw;
@@ -28,12 +30,87 @@
 .post-content-box {
   display: flex;
   color: black;
-  text-align: center;
+  justify-content: left;
   width: 85vw;
   /* height: 60vh; */
   background-color: white;
   /* padding: 2%; */
   font-size: 4vw;
-  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+  /* box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8); */
+}
+.post-content {
+  margin: 2%;
+}
+@media (min-width: 400px) {
+  .post-container {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    height: 100vh;
+    /* justify-content: flex-end; */
+    /* align-self: center; */
+    /* align-items: center; */
+    /* height: 70vh; */
+    margin: 2%;
+    background-color: white;
+    font-size: 2vw;
+    /* box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8); */
+  }
+  .post-title {
+    font-size: 4vw;
+  }
+  .post-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* width: 100vw; */
+    /* height: 80vh; */
+    /* background-color: gray; */
+    /* font-size: 5vw; */
+  }
+  .post-header {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* height: 40vh; */
+    /* font-size: 6vw; */
+    /* justify-content: space-evenly;
+    align-items: center; */
+    /* overflow:scroll; */
+    /* font-size: 2vw; */
+    /* align-self: center; */
+    /* width: 85vw; */
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+
+    /* text-align: center; */
+    /* background-color: gray; */
+    /* color: black; */
+    /* padding: 2%; */
+    /* text-align: center; */
+  }
+  /* .post-title {
+    font-size: 3vw;
+    color: red;
+  } */
+
+.post-content {
+  margin: 2%;
+}
+
+  .post-content-box {
+    /* display: flex; */
+    /* color: orange; */
+    /* text-align: center; */
+    /* width: 85vw; */
+    /* height: 60vh; */
+    /* background-color: white; */
+    /* padding: 2%; */
+    /* font-size: 3vw; */
+    /* box-shadow: none; */
+    /* background-color: white; */
+    justify-content: left;
+    /* margin: 1%; */
+    font-size: 3vw;
+  }
+
 }
 

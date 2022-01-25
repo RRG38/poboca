@@ -30,15 +30,17 @@ class Post extends Component {
     return (
       <div className="post-container">
         {!this.state.loading && this.state.title ? (
-          <div>
+          <div className='post-parent'>
             <div className="post-header">
+              <div>
               <div className="post-title">{this.state.title}</div>
               <div className="author-box">
                 - {this.state.author}
               </div>
+              </div>
             </div>
             <div className="post-content-box">
-              <div>{this.state.content}</div>
+              <div className='post-content'>{this.state.content}</div>
             </div>
           </div>
         ) : !this.state.loading ? (
