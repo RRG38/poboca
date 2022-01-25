@@ -44,7 +44,7 @@ class Post extends Component {
         ) : !this.state.loading ? (
           <div className="oops-box">
             <div className="title">Oops!</div>
-            <div>Looks like this post doesn't exist anymore</div>
+            <div>You have deleted your post.</div>
           </div>
         ) : (
           <div className="load-box">

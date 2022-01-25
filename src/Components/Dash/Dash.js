@@ -69,10 +69,13 @@ class Dash extends Component {
       const id = post.post_id;
       const intID = +id;
       return (
+        <div className='dash-content-parent'>
+        <div className='dash-content-container'>
         <div className="content-box-dash-post-box" key={post.post_id}>
-          <Link style={{textDecoration: 'none'}} className='my-post-title' to={`post/${intID}`}>
-            <div>{post.title}</div>
-          </Link>
+          <Link style={{textDecoration: 'none'}}  to={`post/${intID}`}>
+            <div className='dash-title-contain'>
+            <div className='my-post-title'>{post.title}</div>
+            </div>
           {post.author_username === this.props.username ? (
             <button className='dash-delete-button' onClick={(_) => this.deletePost(post.post_id)}>
               Delete your Post
@@ -83,6 +86,9 @@ class Dash extends Component {
               <div className='dash-school-text'> {this.props.school}</div>
             </div>
           )}
+          </Link>
+        </div>
+        </div>
         </div>
       );
     });
@@ -133,15 +139,17 @@ class Dash extends Component {
           </div>
           </div>
         </div>
-        <div className="content-box dash-posts-container">
+          <div className='dash-content-parent'>
+        <div className="dash-content-container">
           {!loading ? (
             mappedPosts
-          ) : (
-            <div className="load-box">
+            ) : (
+              <div className="load-box">
               <div className="load-background"></div>
               <div className="load"></div>
             </div>
           )}
+        </div>
         </div>
       </div>
       </div>
