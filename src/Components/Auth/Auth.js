@@ -24,11 +24,11 @@ class Auth extends Component {
     });
   }
   login() {
-    const { username, password, school } = this.state;
     axios
       .post("/api/auth/login", this.state)
-      .then((res) => {
-        this.props.updateUser({ username, password, school });
+      .then(({data}) => {
+        const { username, school } = data
+        this.props.updateUser({ username, school });
         this.props.history.push("/dash");
       })
       .catch((err) => {
@@ -37,11 +37,11 @@ class Auth extends Component {
       });
   }
   register() {
-    const { username, password, school } = this.state;
     axios
       .post("/api/auth/register", this.state)
-      .then((res) => {
-        this.props.updateUser({ username, password, school });
+      .then(({data}) => {
+        const { username, school } = data
+        this.props.updateUser({ username, school });
         this.props.history.push("/dash");
       })
       .catch((err) => {

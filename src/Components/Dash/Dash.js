@@ -83,7 +83,7 @@ class Dash extends Component {
           ) : (
             <div className="author-box">
               <div className='author-text'>- {post.author_username}</div>
-              <div className='dash-school-text'> {this.props.school}</div>
+              <div className='dash-school-text'> {post.school}</div>
             </div>
           )}
           </Link>
