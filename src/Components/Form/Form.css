@@ -26,7 +26,7 @@
 .form-main {
   display: flex;
   flex-direction: column;
-  /* height: 65vh; */
+  height: 65vh;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -63,19 +63,69 @@
   box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }
 
-@media (min-width: 400px) {
+@media (min-width: 700px) {
   .form-title {
     font-size: 5vw;
   }
 
   .form-text-box {
-    font-size: 4vw;
+    font-size: 2vw;
   }
 
   .form-main {
     background-color: #242424;
     color: white;
   }
+  .form-input-box {
+    width: 70vw;
+    /* height: 8vh; */
+    font-size: 2vw;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  .form-dark-button {
+    font-size: 3vw;
+    background-color: #dddddd;
+    /* color: white; */
+    /* height: 15vw; */
+    width: 15vw;
+    /* margin: 2%; */
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+  }
+}
+  @media (min-width: 1000px) {
+    .form-title {
+      font-size: 2vw;
+    }
+
+    .form-text-box {
+      font-size: 1vw;
+    }
+
+    .form-main {
+      background-color: #242424;
+      color: white;
+    }
+    .form-input-box {
+      width: 40vw;
+      /* height: 8vh; */
+      font-size: 1vw;
+      padding: 2%;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+    }
+    .form-dark-button {
+      font-size: 2vw;
+      background-color: #dddddd;
+      /* color: white; */
+      /* height: 15vw; */
+      width: 15vw;
+      /* margin: 2%; */
+      box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+    }
 }
 
 

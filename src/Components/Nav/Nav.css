@@ -69,7 +69,7 @@
   font-size: 15vw;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 700px) {
   .nav-parent {
     /* width: 100vw; */
     /* height: 20vh; */
@@ -139,6 +139,81 @@
   .material-icons {
     color: white;
     font-size: 10vw;
+  }
+
+}
+@media (min-width: 1000px) {
+  .nav-parent {
+    /* width: 100vw; */
+    /* height: 20vh; */
+    background-color: #242424;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+  }
+
+  .nav-links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nav-title-user-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .username-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .bottom-nav {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .nav-icons-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .username {
+    color: #eeeeee;
+    font-size: 2vw;
+  }
+
+  .nav-school {
+    color: #eeeeee
+    ;
+    font-size: 2vw;
+  }
+
+
+.form-content-box {
+  width: 60vw;
+}
+  .title {
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 3vw;
+  }
+
+  .nav-links {
+    color: white;
+  }
+
+  .nav-links-left {
+    display: flex;
+    color: white;
+    flex-direction: column-reverse;
+    /* justify-content: space-around; */
+  }
+
+  .material-icons {
+    color: white;
+    font-size: 5vw;
   }
 
 }

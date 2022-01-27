@@ -1,8 +1,9 @@
 .master-dash {
   display: flex;
   flex-direction: column;
-  width: 95vw;
-  align-self: center;
+  /* width: 95vw; */
+  /* align-self: center; */
+  align-items: center;
 }
 
 .dash {
@@ -10,8 +11,9 @@
   flex-direction: column;
   background-color: #242424;
   width: 90vw;
+  justify-content: center;
   /* height: 75vh; */
-  align-self: center;
+  /* align-self: center; */
   align-content: space-around;
   box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }
@@ -89,7 +91,7 @@ font-size: 4vw;
 .my-post-title {
   font-size: 5vw;
   color: black;
-  max-height: 8vh;
+  max-height: 6vh;
 }
 
 .author-text {
@@ -148,7 +150,7 @@ font-size: 4vw;
 }
 
 
-@media (min-width: 500px) {
+@media (min-width: 700px) {
   .master-dash {
     display: flex;
     flex-direction: column;
@@ -160,6 +162,7 @@ font-size: 4vw;
     color: black;
     font-size: 4vw;
     margin: 2%;
+    font-size: 3vw;
     /* align-self: center; */
     text-align: center;
     /* justify-content: center; */
@@ -256,7 +259,7 @@ font-size: 4vw;
   }
 
   .my-post-title {
-    font-size: 4vh;
+    font-size: 5vh;
     color: black;
     /* overflow: hidden; */
 
@@ -270,7 +273,7 @@ font-size: 4vw;
 }
   .author-text {
     color: black;
-    font-size: 4vh;
+    font-size: 2vw;
   }
 
   .dash-dark-button {
@@ -312,6 +315,179 @@ font-size: 4vw;
     color: white;
   }
 
+  .dash-school-text {
+    font-size: 2vw;
+  }
+
+
+}
+@media (min-width: 1000px) {
+  .master-dash {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dash-new {
+    /* display: flex;
+    flex-direction: column; */
+    color: black;
+    font-size: 2vw;
+    margin: 1%;
+    /* align-self: center; */
+    text-align: center;
+    /* justify-content: center; */
+  }
+  .dash {
+    /* display: flex; */
+    /* flex-direction: column; */
+    background-color: #eeeeee;
+    width: 70vw;
+    /* height: 75vh; */
+    /* align-self: center; */
+    /* align-content: space-around; */
+  }
+
+  .content-box-dash-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    background-color: #242424;
+  }
+
+  .dash-search {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-self: center;
+    color: white;
+    font-size: 2vw;
+  }
+  .dash-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-around; */
+  color: white
+  }
+
+  .dash-search-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 65vw;
+  padding: 1%;
+  /* height: 20vh; */
+  }
+
+  .dash-search-bar {
+  font-size: 1vw;
+  margin: 1%;
+  width: 40vw;
+  }
+
+  .dash-check-box-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .dash-check-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  }
+
+  .dash-post-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 10px 0; */
+  }
+
+  /* .dash-post-box > h3 {
+  font-size: 4vw;
+  } */
+
+  .dash-content-parent {
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    background-color: white;
+    margin: 1%;
+  }
+  .dash-content-container {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    /* align-content: space-around; */
+    /* height: 100vh; */
+    background-color: #ffffff;
+    /* box-shadow: 1px 1px 1px 1px #ffffff; */
+  }
+
+  .my-post-title {
+    font-size: 3vh;
+    color: black;
+    /* overflow: hidden; */
+
+  }
+.dash-title-contain {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 12vh;
+  /* align-items: center; */
+}
+  .author-text {
+    color: black;
+    font-size: 3vh;
+  }
+
+  .dash-dark-button {
+    font-size: 2vw;
+    width: 10vw;
+    /* justify-content: space-evenly; */
+
+  }
+
+  .dash-buttons-container {
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
+  }
+
+  .content-box-dash-post-box {
+    display: flex;
+
+    justify-content: start;
+    /* text-align: center; */
+    /* align-items: flex-start; */
+
+    /* flex-direction: column; */
+    /* box-sizing: border-box; */
+    /* padding: 2%; */
+    /* text-align: center; */
+    /* justify-content: space-around; */
+    /* height: 15vh; */
+    width: 55vw;
+    background-color: #eeeeee;
+    color: #000000;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,.8);
+  }
+
+  .dash-delete-button {
+    font-size: 1vw;
+
+    background-color: #242424;
+    color: white;
+  }
+  .dash-school-text {
+    font-size: 2vw;
+  }
 
 
 }

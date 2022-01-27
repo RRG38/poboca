@@ -32,7 +32,7 @@ class Post extends Component {
         {!this.state.loading && this.state.title ? (
           <div className='post-parent'>
             <div className="post-header">
-              <div>
+              <div className='post-title-username-container'>
               <div className="post-title">{this.state.title}</div>
               <div className="author-box">
                 - {this.state.author}
