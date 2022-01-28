@@ -6,9 +6,12 @@ const express = require("express");
 userCtrl = require("./controllers/user");
 postCtrl = require("./controllers/posts");
 
+const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET } = process.env;
+const path = require('path')
+
 const app = express();
 
-const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET } = process.env;
+
 app.use(express.json());
 app.use(
   session({
@@ -42,6 +45,12 @@ app.get("/api/posts", postCtrl.readPosts);
 app.post("/api/post", postCtrl.createPost);
 app.get("/api/post/:id", postCtrl.readPost);
 app.delete("/api/post/:id", postCtrl.deletePost);
+
+app.use(express.static(__dirname + '/../build' ))
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build/index.html'))
+})
 
 app.listen(SERVER_PORT, () => console.log(`running on ${SERVER_PORT}`));
 

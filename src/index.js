@@ -1,19 +1,21 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { HashRouter } from "react-router-dom";
-import { Provider } from "react-redux";
 import "./index.css";
 
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { HashRouter, BrowserRouter } from "react-router-dom";
 import store from "./redux/store";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+const Router = process.env.NODE_ENV === 'development' ? HashRouter : BrowserRouter
+
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <HashRouter>
+      <Router>
         <App />
-      </HashRouter>
+      </Router>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
