@@ -104,7 +104,7 @@ class Dash extends Component {
               value={search}
               onChange={(e) => this.setState({ search: e.target.value })}
               className="dash-search-bar"
-              placeholder="example: React, React Hooks, ReactJS, CSS Mastery"
+              placeholder="example: Javascript, CSS, ReactJS, Redux, etc."
             />
             <div className='dash-buttons-container'>
             <button onClick={this.grabPosts} className="dash-dark-button">

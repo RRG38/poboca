@@ -29,7 +29,7 @@ class Form extends Component {
               <div className='form-text-box'>What do you want to learn more about:</div>
                 <div className="learn-about">
                   <input className="form-input-box"
-                  placeholder="example: React, React Hooks, ReactJS, CSS Mastery"
+                  placeholder="example: Javascript, CSS, ReactJS, Redux, etc."
                   value={this.state.title}
                   onChange={(e) => this.setState({ title: e.target.value })}
                   />
@@ -38,7 +38,7 @@ class Form extends Component {
               Put in here what resources you have to learn about your topic and the way to contact you: </div>
                 <div className='learn-about'>
                   <input className="form-input-box"
-                    placeholder="Example: A past project, past assignment, CodeWars Kata, etc..."
+                    placeholder="example: A past project, past assignment, CodeWars Kata, etc."
                     value={this.state.content}
                     onChange={(e) => this.setState({ content: e.target.value })}
                   />

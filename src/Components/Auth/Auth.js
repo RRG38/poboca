@@ -80,7 +80,7 @@ class Auth extends Component {
 
           <input className="auth-input"
             value={this.state.school}
-          placeholder="Bootcamp Attended *Only Required at Register"
+          placeholder="Bootcamp Attended *Only Required at Register*"
             onChange={(e) => this.handleChange("school", e.target.value)}
           />
             <input className="auth-input"
